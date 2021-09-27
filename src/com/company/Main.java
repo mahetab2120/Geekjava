@@ -4,14 +4,16 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
+
         int n=0;
         Scanner sc=new Scanner(System.in);
         System.out.println("Enter number 1 for MaxOfThree.");
         System.out.println("Enter number 2 for SumOfNumber.");
         System.out.println("Enter number 3 for CheckPrime.");
-        System.out.println("Enter number 4 for CheckPrime.");
+        System.out.println("Enter number 4 for array.");
+        System.out.println("Enter number 5 for DigitCount.");
 
-        System.out.println("Enter number your choice : ");
+        System.out.print("Enter number your choice : ");
         n=sc.nextInt();
         if(n==1)
 
@@ -24,6 +26,17 @@ public class Main {
             CheckPrime();
         if(n==4)
             arr();
+        if(n==5)
+            DigitCount();
+    }
+    static void DigitCount()
+    {
+        int n=0;
+        Scanner sc=new Scanner(System.in);
+        System.out.print("Enter number : ");
+        n=sc.nextInt();
+        Integer s1= n;
+        System.out.println(s1.toString().length());
     }
     static void arr()
     {
@@ -52,7 +65,7 @@ public class Main {
     }
     static void CheckPrime()
     {
-         int n,m,temp=0;
+        int n,m,temp=0;
 
         System.out.println("Enter number: ");
         Scanner sc=new Scanner(System.in);
@@ -62,16 +75,16 @@ public class Main {
             System.out.println(n + " is not a prime Number.");
         } else {
             for (int i = 2; i < m; i++) {
-                if (n%i==0) 
+                if (n%i==0)
                 {
-                     System.out.println(n + " is not a prime Number.");
-                     temp=1;
-                     break;
+                    System.out.println(n + " is not a prime Number.");
+                    temp=1;
+                    break;
                 }
             }
-            if(temp==0)  
+            if(temp==0)
             {
-                 System.out.println(n+" is prime number"); 
+                System.out.println(n+" is prime number");
             }
         }
     }
